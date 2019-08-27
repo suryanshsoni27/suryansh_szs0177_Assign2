@@ -40,22 +40,33 @@ public class JUnitTest {
 
 
     @Test(expected = NullPointerException.class)
-    public void test_findinvMax() {
+    public void test_findinvnullMax() {
         Finder find = new Finder();
         int[] i;
         i = null;
-        int[] j = new int[]{};
         int ar = find.findMax(i);
-        int ar2 = find.findMax(j);
+
     }
 
     @Test(expected = NullPointerException.class)
-    public void test_findinvMin() {
+    public void test_findinvemptyMax() {
+        Finder find = new Finder();
+        int[] j = new int[]{};
+        int ar2 = find.findMax(j);
+    }
+    @Test(expected = NullPointerException.class)
+    public void test_findinvnullMin() {
         Finder find = new Finder();
         int[] i;
         i = null;
-        int[] j = new int[]{};
         int ar = find.findMin(i);
+
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void test_findinvemptyMin() {
+        Finder find = new Finder();
+        int[] j = new int[]{};
         int ar2 = find.findMin(j);
     }
 
